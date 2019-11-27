@@ -51,53 +51,44 @@ Lenguajes disponibles del Algoritmo: MatLab.
 
 ## Conclusiones
 
-1. Como se demuestra en este trabajo y en [16], es posible implementar en Python un conjunto de
-algoritmos de aprendizaje de máquina con múltiples anotadores teniendo como referencia los
-códigos en MatLab que los autores han proporcionado en sus trabajos.
+En este trabajo presentamos la selección, implementación, evaluación y análisis de
+resultados de cinco técnicas del estado del arte sobre aprendizaje de máquina con
+múltiples anotadores. Cada uno de los algoritmos aquí tratados fue descrito
+detalladamente con el objetivo de entender y exponer de manera resumida el
+funcionamiento planteado por los autores. Posteriormente, se implementaron los
+algoritmos en Python, utilizando como base los códigos liberados de los autores en
+lenguajes como MatLab o Julia; los cuales posteriormente se evaluaron utilizando las
+métricas de precisión, Recall, F1 Score y ROC, las cuales permitieron conocer desde
+diferentes puntos de vista el rendimiento de cada uno de los algoritmos propuestos.
+De este modo, se puede concluir que es posible desarrollar un comparativo no solo básico,
+sino utilizando métricas más robustas, las cuales ofrecen al usuario una visión general del
+rendimiento, bajo múltiples métricas de rendimiento, de las diferentes técnicas de
+clasificación binaria con múltiples anotadores. Por otro lado, y más allá del tema principal
+de este trabajo y como elemento importante a resaltar, se recomienda no evaluar la calidad
+de un modelo o método de aprendizaje de máquina con sólo una métrica de rendimiento,
+esto debido a que métricas como la precisión hacen un resumen general del
+comportamiento del modelo y no permiten visualizar detalles que pueden indicar que el
+modelo está sesgado hacia una clase u otra.
 
-2. Es posible replicar en código algunos de los algoritmos de clasificación binaria con múltiples
-anotadores más relevantes en la literatura.
+En general se pudo observar de primera mano que los autores citados en este documento
+han presentado diferentes soluciones a los diferentes problemas que puede acarrear el
+manejo de múltiples anotadores; algunos han presentados modelos de variables latentes
+que modelan la experticia variante entre muestras de cada anotador, mientras que otros
+presentan propuestas con algunas relajaciones de estas suposiciones.
 
-3. Es posible desarrollar un comparativo no solo básico, sino utilizando métricas mas robustas como
-Recall, F1 Score y ROC, las cuales ofrecen al usuario una visión general de cuál técnica usar
-según su problema de crowdsourcing entre las diferentes técnicas de clasificación binaria con
-múltiples anotadores.
+Según los resultados obtenidos, autores como [9] y [12], que implementan modelos que
+usan algoritmos como el EM para solucionar problemas de optimización donde se busca
+la máxima verosimilitud de una matriz de coeficientes y de este modo, determinar la
+experticia de cada uno de los anotadores, han probado tener mejores resultados que
+implementaciones más heurísticas como [7], donde se asumen supuestos que hacen que
+el modelo propuesto sea sensible al balanceo de clases.
 
-4. Los modelos de aprendizaje de máquina con múltiples anotadores han venido aumentados su
-popularidad e importancia a través de los años y más ahora con el crecimiento de la información
-de múltiples fuentes y nacimiento de plataformas como Amazon Mechanical Turkey que
-permiten de manera sencilla, ágil y económica la recolección de información de muchas
-personas.
-
-5. Los autores citados en este documento han presentado diferentes soluciones a los múltiples
-problemas que puede acarrear el manejo de múltiples anotadores, algunos han presentados
-modelos de variables latentes que modelan la experticia variante entre experimentos de cada
-anotador mientras otros presentan propuesta con algunas relajaciones de estas suposiciones.
-
-6. Los autores de [9] y [12], que implementan modelos que usan algoritmos como el EM para
-solucionar problemas de optimización donde se busca la máxima verosimilitud de una matriz de
-coeficientes y de este modo, determina la experticia de cada uno de los anotadores, han probado
-tener mejores resultados que implementaciones más heurísticas como [7], donde se asumen
-supuestos que hacen que el modelo propuesto sea sensible al balanceo de clases.
-
-7. Las diferentes técnicas de pre-procesamiento de datos como Selección de Características
-permiten manejar el problema de la alta dimensionalidad en conjuntos de datos, ya que se pueden
-seleccionar sólo las variables más significativas para el proceso.
-
-8. No es recomendable que el rendimiento de un modelo de aprendizaje de máquina supervisado sea
-evaluado sólo con una métrica de rendimiento, esto debido a que métricas como la Precisión
-hacen un resumen general del comportamiento del modelo y no permiten visualizar detalles que
-pueden indicar que el modelo esté sesgado hacia una clase u otra.
-
-9. Un modelo de clasificación binaria sobre una Regresión Lineal es algo bastante sencillo y rápido
-de probar e implementar que puede ser usado para una gran cantidad de tareas sin ningún
-problema y con una alta eficiencia, sin embargo existen algunos problemas de clasificación en
-donde las clases no pueden ser separadas por hiperplanos, situación en la cual este modelo debe
-ser reemplazado por uno más complejo.
-
-10. La implementación en Python de todos estos modelos de aprendizaje de máquina con múltiples
-anotadores permitirá a los estudiantes e investigadores contar con nuevas herramientas para
-abordar este tipo de problemas.
+En general se observa según la cantidad de artículos disponibles en la literatura y la
+cantidad de citas de ellos, que los modelos de aprendizaje de máquina con múltiples
+anotadores han venido aumentados su popularidad e importancia a través de los años y
+más ahora con el crecimiento de la información de múltiples fuentes y nacimiento de
+plataformas como Amazon Mechanical Turkey, que permiten de manera sencilla, ágil y
+económica la recolección de información de muchas personas.
 
 ## BIBLIOGRAFIA
 
